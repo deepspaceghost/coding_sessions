@@ -26,10 +26,11 @@ the isalnum() function.
 
 # Output: The character is E
 
-as_key = input(int("Hand over the ASCII!: "))
-if as_key is < 0 or > 127:
-	print("Can you read?")
-	print("I need a number between 0 and 127.")
-else:
-    print("Good job! Go get yourself cookie.")
-    print()
+print("And now, for my next trick...")
+print("I will change your number into a letter.")
+
+presto = input("Give me your number: ")
+
+chango = int(presto)
+
+print(chr(chango))

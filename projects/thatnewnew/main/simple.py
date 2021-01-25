@@ -16,18 +16,9 @@ program displays the character a.
 # Compute
 
 """
-To get the ASCII code of a character, use
-the ord() function. To get the character encoded by
-an ASCII code number, use the chr() function. To
-know if all the characters present in a string
-are alphanumeric i.e. they are alphabets and numeric, use
-the isalnum() function.
 """
 
-"""
-Current obstacle: add code to avoid the viola function if chango fails num_check
-Solutions: none, as of 9:05pm, 1/24/2021
-"""
+# Current task(s): as of 9:05pm, 1/24/2021, create tests for individual functions
 
 # Output: The character is E
 
@@ -37,10 +28,10 @@ def num_check(chango):
     """
 
     print("What do we have here?")
-    if chango < 0:
-        print("What's this? This number is too small!")
-    elif chango > 127:
-        print("What's this? This number is too big!")
+    if chango > 127 or chango < 0:
+        print("What's this? This number will not do!")
+
+    exit()
 
 
 def voila(chango):
@@ -49,6 +40,8 @@ def voila(chango):
 
     print("Voila!")
     print(chr(chango))
+
+    exit()
 
 
 if __name__ == "__main__":

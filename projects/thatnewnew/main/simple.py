@@ -18,7 +18,7 @@ program displays the character a.
 """
 """
 
-# Current task(s): as of 9:05pm, 1/24/2021, create tests for individual functions
+# Current task(s): as of 1:39am, 1/25/2021, create tests for individual functions
 
 # Output: The character is E
 

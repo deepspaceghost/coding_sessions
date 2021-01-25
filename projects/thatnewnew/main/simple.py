@@ -25,26 +25,49 @@ the isalnum() function.
 """
 
 """
-Current obstacle: the user enters a non-number string.
-Solutions: none, as of 7:26am, 1/19/2021
+Current obstacle: add code to avoid the viola function if chango fails num_check
+Solutions: none, as of 9:05pm, 1/24/2021
 """
 
 # Output: The character is E
 
-print("And now, for my next trick, give me a number, between 0 and 127.")
-print("In exchange, I will make a letter appear in its place.")
 
-presto = input("Give me a number, any number, between 0 and 127: ")
-if str(presto):
-    print("Psst.")
-    print("I need the number, not the word for the number.")
-    input("Give me a number, between 0 and 127, please: ")
-else:
-    chango = int(presto)
+def num_check(chango):
+    """
+    """
+
+    print("What do we have here?")
     if chango < 0:
-        input("Give me a number, between 0 and 127, please: ")
+        print("What's this? This number is too small!")
     elif chango > 127:
-        input("Give me a number, between 0 and 127, please: ")
-    else:
-        print("Voila!")
-        print(chr(chango))
+        print("What's this? This number is too big!")
+
+
+def voila(chango):
+    """
+    """
+
+    print("Voila!")
+    print(chr(chango))
+
+
+if __name__ == "__main__":
+    """
+    """
+
+    print("And now, for my next trick, give me a number, between 0 and 127.")
+    print("In exchange, I will make a letter appear in its place.")
+
+    presto = input("Give me a number, any number, between 0 and 127: ")
+
+    try:
+        chango = int(presto)
+
+    except ValueError as err:
+        print("INFO: Could not convert data into a integer.")
+        print("DEBUG: {0}".format(err))
+
+        exit()
+
+    num_check(chango)
+    voila(chango)

@@ -27,11 +27,12 @@ def num_check(chango):
     """
     """
 
-    print("What do we have here?")
+    #  print("What do we have here?")
     if chango > 127 or chango < 0:
-        print("What's this? This number will not do!")
+        #  print("What's this? This number will not do!")
+        return False
 
-    exit()
+    return True
 
 
 def voila(chango):
@@ -62,5 +63,8 @@ if __name__ == "__main__":
 
         exit()
 
-    num_check(chango)
-    voila(chango)
+    if num_check(chango):
+        print("This number is within range!")
+        voila(chango)
+    else:
+        print("This number is not within range!")
